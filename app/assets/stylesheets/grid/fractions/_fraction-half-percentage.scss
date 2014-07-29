@@ -1,0 +1,24 @@
+// **************************************************
+//
+// GRID SYSTEM
+// modular grid system
+//
+// _invariant-half.scss
+//
+// Split a column into 2 cols
+//
+// **************************************************
+
+.g-all-half-percentage {
+  width:47.5%;
+  float:left;
+  &.g-all-f {
+    margin-right:5%;
+  }
+  @include respond-to(mobile) {
+    width: 100%;
+    &.g-all-f {
+      margin-right: 0;
+    }
+  }//mobile
+}

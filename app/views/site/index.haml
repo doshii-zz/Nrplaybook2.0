@@ -1,0 +1,137 @@
+%header.site-header.push
+  %img{ src: image_path('header-img.jpg') }/
+  %a.menu-link
+    .iconlink.push{href: "#"}
+      .buton-line
+      .buton-line
+      .buton-line
+    %p.nav.push table of contents
+  %nav#menu.panel{role: "navigation"}
+    %ul
+      {% for post in site.posts %}
+      %li
+        %a{href: "\#"}
+      {% endfor %}
+  .title-general
+    .log
+      %span.icon-book
+    %span.icon-nrlogo
+    %p Playbook
+  .presentation
+    %p
+      What to expect?
+      %br/
+      Will we work well together?
+      %br/
+      Are we the right team for you?
+  :javascript
+    $(document).ready(function() {
+      $('.menu-link').bigSlide();
+    });
+.container
+  .chapter
+    %h2 welcome
+    %p
+      We’re Neon Roots. This is our playbook. It should give you an idea of what we’re all about, what we do, and what you’re in for. This document isn’t chiseled in stone. It grows as we grow. It’s been dictated by our past experiences, and it will transform with future ones.
+    %p
+      We want to make things simple for you. If you already have experience working with developers and are familiar with product development and/or lean startup principles, you might already know a lot of this, but we think you’ll see that we do things a little differently at Neon Roots. If you’re coming in blind with no tech knowledge at all, this playbook should serve as a helpful resource.
+  .chapter
+    %h2 who are neon roots?
+    %p
+      We’re a full-service custom design and development shop specializing in responsive web/mobile solutions and custom applications.  We’re dual-headquartered in Los Angeles and Montevideo, UY, and we take on projects that inspire us, challenge our team, and push us to innovate.  We produce solutions, but most of all we create.
+  .chapter
+    %h2 your developer team
+    %p
+      Each team working on your product is a full-stack team consisting of engineers and designers, all working together. We believe in pair programming because having a developer to back you up always makes things more productive.  We’ve taken out the guesswork and have our process down to a science. How? Every project is broken into features/user stories or a product backlog.
+      Each user story is assigned points based on the effort involved. Story points are not just “educated guesses” or numbers we pull out of the air. They are based on the actual velocity of our previous work on other projects. With burndown charts, we’re able to accurately measure how much we can get done in a given sprint.
+    %img{ src: image_path('teamsquad.png')}/
+    %h3 Your Team is Dedicated
+    %p
+      Your team is your team. Our resources don’t work on multiple projects and we don’t switch resources around. You will be working with them through the entire lifecycle of your product.
+    %h3 Communication
+    .quote
+      %h3 Stand-Ups
+      %p
+        Stand-ups between scrum master and the product team take place on a daily basis. These usually run about 30 minutes. As a product owner, you’re more than welcome to attend, but it’s not mandatory. We’ll keep you up-to-date by posting on Trello and of course you can always catch up on the conversation in your Hipchat project room.
+    .quote
+      %h3 HipChat
+      %p Hipchat is your new best friend.  Our entire product team will use it every day to communicate, collaborate, and discuss project details in your project room.  Please download the desktop client and native one for your smartphone.
+      %img{ src: image_path('hipchat.jpg')}/
+    .quote
+      %h3 E-mails
+      %p
+        We try to avoid clutter and things falling through the cracks, that why we take advantage of tools like HipChat and Trello.
+      %img{ src: image_path('trello.jpg')}/
+    .quote
+      %h3 Meetings
+      %p
+        We recommend that product owners attend demo/planning meetings that are usually held once a week using Google Hangout.  Typically, we timebox them to about 1 hour.  It’s a great tool for working remote.  We discuss this in greater detail in our agile scrum book. (link) Unfortunately we can’t do impromptu meetings.  Sorry.  If you want to meet in-person we need at least 72 hrs notice.  If you want to call to discuss anything related to the project outside the scope of the process and deliverables we need about 48 hrs notice.
+    .quote
+      %h3 Calls
+      %p
+        We also can’t do impromptu calls.  Communication is critical in development, and you have a direct line to the team every single day.  We know that as a product owner, you’re always feeling pressured, under the gun, or influenced by others/advisors/lawyers or any number of things.  If you feel something is seriously wrong with the development process on your project, we’re more than happy to schedule a call.  As product heads of the company, we don’t bill for our time, and that’s why we like to be as efficient as possible.
+  .chapter
+    %h2 What we do (and what we don't)
+    %h3 IT Support / Analytics / Domain Set-up
+    %p
+      We’re more of a product development shop, than an IT systems support center. If you want to us to do something like create a Google apps account for you, we can definitely do it. Just keep in mind that it will count as a story card and eat up time and money against development.  It’s probably not the best use of our time, but that said, we will make sure everything on the server side and database is covered.
+    %img{ src: image_path('angry.jpg')}/
+    %h3 SEO / Marketing
+    %p
+      We have professionals certified in both Google Adwords and Analytics. Please let us know if you are looking for help with PPC management or other online marketing activities offline. We’ve got an in-house team dedicated to just content, delivering the right messaging through targeted SEO blogging that is both keyword rich and fun for your visitors to read, and of course social media management for all our products. After all, we’re #1 on google for ‘los angeles mobile app development.’ We must be doing something right.
+    %img{ src: image_path('googlesearch.jpg')}/
+    %p
+      For more information on our process and how we apply it to our own products, please visiting our published eBook titled the
+      %a{href: "http://www.neonroots.com/books/seo"} Digital Marketing Starters Guide.
+    %h3 Spec work / pre-sell
+    %p This isn’t something we do. Sorry.
+    %h3 Advisor Roles / Capacity
+    %p
+      We’ve done this from time to time in the past. We know you need to do whatever it takes to get financing. So if you need to say we’re on the team, we understand that.
+    %h3 Vetting Internal Hires
+    %p
+      We recognize that at some point it will be most efficient for you and your company to hire internally. We are happy to discuss an engagement where we can vet team members for your product and/or train them after your MVP release with us. Our relationships are all ongoing and span the globe, many have acted as advisors on various funded start-ups and Venture Capital firms.
+    %h3 Deadline and Projected Release/Launch Dates
+    %p
+      We prefer to under-promise and over-deliver. Estimated delivery dates are just that: estimates.  An architect doesn’t know how long it will take to design and build your house without scoping the project, drafting plans, speaking with engineers, specifying materials, etc. That said, our formula is fairly accurate.
+    %h3 Equity
+    %p
+      A smart product owner who truly believes in his or her idea will want to retain as much ownership as possible. That said, we know that raising cash is easier said than done. We do invest and subsidize in a handful of deals each year with cash/equity splits, but it takes two to tango.
+    %p
+      We’re confident that we can launch your product to market. But do you have what it takes to operate and market it? Also, assuming we will be your technical partner, we also want to make sure there is a cultural fit and our teams mesh.  Typically, we invest and/or subsidize costs after an initial MVP release (v1.0). It’s the best way for you, as a product owner, to make sure we’re the right team and the same goes for us.
+    %h3 RFPs – Fixed Bid
+    %p
+      We don’t think RFPs work when looking for a development shop, so fixed bids aren’t something that we do.  RFPs only work when you’re looking for bids on a commodity, and professional services are not a commodity.
+
+    %p
+      Design is a collaboration and RFPs undercut the communication between you and your developers which could ultimately lead to the failure of your product.  A fixed bid means a fixed feature set that doesn’t allow for the natural evolution of a product that is vital for its success. With RFPs you’re only looking for the cheapest bid and exact times frames, not for a partnership, and that’s what successful product development is all about.  You can read what we really think about fixed bids in our blog
+      %a{href: "http://blog.neonroots.com/the-bs-of-rfps-why-it-wont-help-your-search-for-an-la-development-shop/"} “The BS of RFPs: Why It Won’t Help Your Search for an LA Development Shop.”
+    %h3 Non-Disclosure Agreements
+    %p
+      We don’t sign them because ideas are ideas. We’re pitched a tremendous number of them and if you feel that an NDA is what’s keeping us from working together for fear that we might steal your idea – we’re probably not the right team for you. What we’re willing to do is have a high-level discussion on our initial call and table any specifics or novel ideas. If we decide to engage, we’re happy to put a non-disclosure in place and this standard with all our engagement contracts, both with Rootstrap and Development with Neon Roots.
+  .chapter
+    %h2 Product owners
+    %p
+      We only work with receptive product owners.  Your degree and/or your exit(s) don’t necessarily matter to us.  We just want you to be passionate about your idea and know that it is going to be a long road to success.  But if you’re willing to listen, we will put you on the right path.  After years of consulting we’ve found that a receptive, enterprising product owner who understands running lean, releasing early, and letting data dictate decisions will have a much greater chance of success.
+    %p
+      When you engage with us, you’re not engaging with a typical agency.  It requires a certain level of trust and respect on both sides.  We intend to treat you as more than just a client and we expect to be treated as more than just a service provider.
+    .quote
+      %h3 One Product Owner to Rule Them All
+      %p
+        "When working with us, there’s only one product owner.  There can be a check signer that differs, but in our process, we only allow for one PO in our process"</p>
+      %h3 Recognize Early on Whether You Make a Good Product Owner
+      %span Jonathan & TargetGMAT
+  .chapter
+    %h2 rootstrap
+    %p
+      Rootstrap is a highly-focused product workshop that delivers a detailed product blueprint for how to execute on your idea from end to end. We start with a research phase where we analyze your industry, current market trends, successes, failures, etc. which serves as the basis for our kick off session.  During the kick off, we'll do a deep drive, evaluate all findings and opportunities and determine a product course. From there, our team will break and begin crafting brand elements and/or wireframing primary user flows depending on the current state of the product. We then review the wireframes as a team to fill in any gaps and flesh out the details. Our team will then incorporate all feedback into the flows and create an initial visual treatment.  Lastly, we provide feature backlog that answers the questions of how long and how much.  We work with you to groom that backlog against your budget.
+    %h3 I know exactly what I want and I want to jump right into development.
+    %p
+      Starting this year, we’ve made Rootstrap a requirement in order to engage with our development team on custom development projects. That reason is simple: it’s a first step that is often overlooked or sometimes completed skipped during the product development cycle in the traditional consulting model. With many agencies, they preach that the discovery / product inception phase is done, but more often than none it gets baked into the whole engagement so the incentives are no longer aligned to create the “Minimum Viable Product” but rather the maximum since that’s what good for the Consultant.
+    %h3 This sounds interesting...How can I hear more?
+    %p
+      Most agencies don’t offer pre-development necessities like Rootstrap. It’s a vital process even if you decide not to engage our firm for the actual development. If you do, we offer a discount. We want to empower you, the product owner, to make the best decisions for your company whether that means hiring another development shop, finding a technical co-founder, or building out your own team. We’re happy to help you make those decisions on the first yard line with you after our two week engagement.
+    %img{ src: image_path('rootstrap.jpg')}/
+  .chapter
+    %h2 Our philosophies
+    %h3 Morale

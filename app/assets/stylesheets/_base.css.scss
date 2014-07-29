@@ -1,0 +1,118 @@
+// --------------------------------------------------------
+// VARIABLES
+// --------------------------------------------------------
+
+$base-color-1: #6b6892;
+$titles-color: #1f1f1f;
+$paragraf-color: #393939;
+$quote-separator-color: #b5b4c9;
+$quote-font-color: #2d2d2d;
+$footer-color: #1c1c1c;
+$footer-buttons-color: #f6f5f2;
+
+$font-noto-italic: 'noto_serifitalic', helvetica, serif;
+$font-relay-bold: 'ralewaybold', helvetica, sans-serif;
+$font-raleway-exbold: 'ralewayextrabold', helvetica, sans-serif;
+$font-notoserif: 'noto_serifregular', helvetica, sans-serif;
+$font-ralewaysemibold: 'ralewaysemibold', helvetica, sans-serif;
+// Breakpoints (change as needed)
+/* Available Variables */
+$handheld-min: 0px;
+$handheld-max: 479px;
+$handheld-landscape-min: 480px;
+$handheld-landscape-max: 767px;
+$small-screen: 768px;
+$default-screen: 980px;
+$medium-screen: 1280px;
+$large-screen-min: 1250px;
+$large-screen-max: 1800px;
+$high-ress-min: 1801px;
+$high-ress-max: 6000px;
+
+@mixin transition ($property: all, $duration: 0.5s, $timing: linear, $delay: 0.1s) {
+  -webkit-transition: #{$property} $duration $timing $delay;
+  -moz-transition: #{$property} $duration $timing $delay;
+  -ie-transition: #{$property} $duration $timing $delay;
+  -o-transition: #{$property} $duration $timing $delay;
+  transition: $property $duration $timing $delay;
+}
+
+$high_ress: "only screen and (min-width:"#{$high-ress-min}") and (max-width: "#{$high-ress-max}")";
+$large: "only screen and (min-width:"#{$large-screen-min}") and (max-width: "#{$large-screen-max}")";
+$default: "only screen and (min-width:"#{$default-screen}")";
+$tablet_portrait: "only screen and (min-width:"#{$small-screen}") and (max-width: "#{$default-screen}")";
+$handheld_landscape: "only screen and (min-width:"#{$handheld-landscape-min}") and (max-width: "#{$handheld-landscape-max}")";
+$handheld: "only screen and (min-width:"#{$handheld-min}") and (max-width: "#{$handheld-max}")";
+$mobiles: "only screen and (max-width: "#{$handheld-landscape-max}")";
+$screen: "only screen";
+$landscape: "only screen and (orientation: landscape)";
+$portrait: "only screen and (orientation: portrait)";
+$screen-only: "only screen and (min-width:"#{$handheld-landscape-max}") and (max-width: "#{$high-ress-max}")";
+
+@mixin respond-to($media) {
+  @if $media == mobile {
+    @media #{$mobiles} { @content; }
+  }
+  @if $media == handheld {
+    @media #{$handheld} { @content; }
+  }
+  @else if $media == handheld-landscape {
+    @media #{$handheld_landscape} { @content; }
+  }
+  @else if $media == tablet-portrait {
+    @media #{$tablet_portrait} { @content; }
+  }
+  @else if $media == default {
+    @media #{$default} { @content; }
+  }
+  @else if $media == large {
+    @media #{$large} { @content; }
+  }
+  @else if $media == high-ress {
+    @media #{$high_ress} { @content; }
+  }
+  @else if $media == screen-only {
+    @media #{$screen-only} { @content; }
+  }
+}
+
+*, *:before, *:after {
+  @include box-sizing(border-box);
+}
+body {
+  margin: 0;
+  padding: 0;
+  @extend .font-smoothing;
+  overflow-x: hidden;
+}//body
+
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}//a
+
+.container {
+  @extend .g-all-c;
+
+  @include respond-to(mobile) {
+    padding: 0 20px;
+  }//mobile
+}//container
+
+//------- mixins & tools-----
+
+.font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}//fontsmoothing
+
+@mixin clearfix() {
+  *zoom:1;
+  &::before, &::after { content: " "; display: table; }
+  &::after { clear: both; }
+}// mix
+
+.clearfix {
+  @include clearfix;
+}// clearfix
