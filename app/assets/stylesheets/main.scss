@@ -130,6 +130,14 @@ header {
   border-bottom: 1px solid #e8e8e8;
   overflow-x: hidden;
 
+  span {
+    font-family: $font-notoserif;
+    font-size: 20px;
+    margin-top: 30px;
+    color: #393939;
+    line-height: 28px;
+  }//span
+
   h2 {
     font-family: $font-raleway-exbold;
     font-size: 42px;
@@ -286,9 +294,6 @@ header {
     }
   }//content
 }
-
-
-
 .expectations {
   position: relative;
   .inside {
@@ -554,3 +559,38 @@ header {
     }
   }
 }//tools
+.container {
+  position: relative;
+}
+#menu.panel {
+  padding-top: 65px;
+  position: fixed;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #1f1f1f;
+  overflow-y: scroll;
+  padding-left: 10px;
+  margin-bottom: 20px;
+
+  ul {
+    li {
+      margin-left: 20px;
+      display: block;
+      margin-bottom: 20px;
+      a {
+        display: block;
+        font-family: $font-relay-bold;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: white;
+        margin-bottom: 5px;
+        cursor: pointer;
+
+        &.sub {
+          color: #c5c5c5;
+        }//sub
+      }//a
+    }//li
+  }//ul
+}//menu.panel
