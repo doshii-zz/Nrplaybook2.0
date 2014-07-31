@@ -70,7 +70,7 @@ header {
 
   .title-general {
     position: absolute;
-    top: 50px;
+    top: 100px;
     left: 20%;
     @extend .clearfix;
     width: 345px;
@@ -105,7 +105,7 @@ header {
       font-size: 38px;
       display: block;
       float: left;
-      margin: 12px 0 0 10px;
+      margin: 20px 0 0 10px;
       font-style: italic;
     }//p
   }//general title
@@ -113,7 +113,7 @@ header {
   .presentation {
     position: absolute;
     left: 20%;
-    top: 200px;
+    top: 270px;
 
     p {
       font-family: $font-relay-bold;
