@@ -121,6 +121,47 @@ header {
       color: white;
     }//p
   }// presentation
+
+  @include respond-to(mobile) {
+
+    a.menu-link {
+      width: 100%;
+      left: 10%;
+    }
+
+    .title-general {
+      top: 75px;
+      left: 20px;
+
+      .log {
+        height: 40px;
+        width: 40px;
+        margin-top: 20px;
+
+        .icon-book {
+          font-size: 25px;
+          margin-left: 10px;
+          line-height: 40px;
+        }//book icon
+      }//log
+      .icon-nrlogo {
+        margin-left: 0px;
+      }//nrlogo
+      p {
+        margin-top: 20px;
+        margin-left: 5px;
+      }//p
+    }//title general
+    .presentation {
+      left: 10px;
+      margin-right: 10px;
+      text-align: center;
+
+      p {
+        font-size: 25px;
+      }//p
+    }//presentation
+  }//mobile
 }//header
 
 .chapter {
@@ -594,3 +635,85 @@ header {
     }//li
   }//ul
 }//menu.panel
+
+#nrfooter {
+  height: 75px;
+  width: 100%;
+  background-color: $footer-color;
+  position: relative;
+  bottom: 0px;
+  @extend .clearfix;
+
+  p {
+    font-family: $font-ralewaysemibold;
+    color: #5f5f5f;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 26%;
+    float: left;
+
+    a {
+      font-family: $font-ralewaysemibold;
+      color: $footer-buttons-color;
+      font-size: 14px;
+    }//a
+  }//p
+
+  .buttons-icons {
+    display: inline-block;
+    @extend .clearfix;
+    margin: 30px 26% 0 0;
+    float: right;
+
+    .circle, .icon-triangle, .icon-x, .icon-square, .icon-hex {
+      float: left;
+      display: inline-block;
+      margin-left: 5px;
+      color: $footer-buttons-color;
+    }//icons
+
+    .circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      border: 2px solid $footer-buttons-color;
+    }//circle
+
+    .icon-triangle {
+      font-size: 35px;
+      line-height: 22px;
+      width: 27px;
+    }//triangle
+
+    .icon-square {
+      font-size: 40px;
+      line-height: 23px;
+      width: 40px;
+      margin-left: 10px;
+    }//square
+
+    .icon-hex {
+      font-size: 24px;
+      line-height: 23px;
+    }//hex
+
+    .icon-x {
+      font-size: 40px;
+      line-height: 24px;
+      width: 40px;
+    }//x
+  }//buttons
+
+  @include respond-to(mobile) {
+    height: auto;
+    padding-bottom: 20px;
+
+    p {
+      display: block;
+      margin-left: 0;
+      float: none;
+      text-align: center;
+    }//p
+  }//mobile
+}// footer
